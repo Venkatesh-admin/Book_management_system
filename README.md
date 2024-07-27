@@ -6,7 +6,7 @@ Here's a README file for deploying the `book_management_system` application:
 
 ## Overview
 
-The Book Management System is a FastAPI application designed for managing book information, user authentication, and generating book recommendations based on user preferences. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
+The Book Management System is a FastAPI application designed for managing book information, user authentication,summarization of book summary using GROQ API of llam3 model and generating book recommendations based on user genres. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
 
 ## Folder Structure
 
@@ -44,6 +44,9 @@ book_management_system/
     ├── __init__.py
     ├── llama3_summary.py
     └── security.py
+
+
+
 ```
 
 ## Prerequisites
@@ -94,7 +97,11 @@ Replace `your_secret_key` with a secure key of your choice.
 
 5. **Trained model and dataset**
 
-   To train the recommendation model with synthetic data, run:
+   Trained the recommendation model with synthetic_books.csv by running
+
+   ```bash
+   python train_model.py
+   ```
 
    saved  model and dataframe pickle and label encoder files in the `train_dataset` directory.
 
@@ -127,7 +134,7 @@ Replace `your_secret_key` with a secure key of your choice.
 To run the unit tests, use:
 
 ```bash
-docker-compose exec web pytest
+pyyest test_main.py
 ```
 
 ## Notes
