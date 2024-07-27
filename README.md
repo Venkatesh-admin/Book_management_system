@@ -6,7 +6,7 @@ Here's a README file for deploying the `book_management_system` application:
 
 ## Overview
 
-The Book Management System is a FastAPI application designed for managing book information,user reviews,summarization of book summary using GROQ API of llam3 model and generating book recommendations based on user genres and ratings using k-Nearest Neighbour. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
+The Book Management System is a FastAPI application designed for managing book information,user reviews,**summarization of book summary** using **GROQ API of llam3 model** and generating book **recommendations based on user genres and ratings using k-Nearest Neighbour**. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
 
 ## Folder Structure
 
@@ -104,12 +104,14 @@ Replace `your_secret_key` with a secure key of your choice.
    ```
 
    saved  model and dataframe pickle and label encoder files in the `train_dataset` directory.
+   
+6.Async is used for the API's and database operations
 
 ## API Endpoints
 
 - **User Management:**
   - `POST /users/`: Create a new user.
-  - `POST /login/`: Authenticate a user and get a JWT token.
+  - `POST /login/`: **Authenticate a user and get a JWT token.**
 
 - **Book Management:**
   - `POST /books/`: Add a new book.
