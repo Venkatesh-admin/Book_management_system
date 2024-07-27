@@ -6,7 +6,7 @@ Here's a README file for deploying the `book_management_system` application:
 
 ## Overview
 
-The Book Management System is a FastAPI application designed for managing book information, user authentication,summarization of book summary using GROQ API of llam3 model and generating book recommendations based on user genres. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
+The Book Management System is a FastAPI application designed for managing book information, user authentication,summarization of book summary using GROQ API of llam3 model and generating book recommendations based on user genres and ratings using k-Nearest Neighbour. It integrates with a PostgreSQL database and uses a machine learning model for recommendations.
 
 ## Folder Structure
 
