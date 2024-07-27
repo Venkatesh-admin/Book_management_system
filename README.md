@@ -107,6 +107,10 @@ Replace `your_secret_key` with a secure key of your choice.
    
 6.Async is used for the API's and database operations
 
+7.**Volumes for model data and postgres**
+    Folder volume is used for the application data
+    Docker volume is used for postgres data
+
 ## API Endpoints
 
 - **User Management:**
