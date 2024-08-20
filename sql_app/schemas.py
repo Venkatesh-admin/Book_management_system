@@ -12,6 +12,10 @@ class UserCreate(BaseModel):
 class UserResponse(BaseModel):
     message:str
     user:Optional[UserCreate]=None
+    class Config:
+        # Exclude the password field when serializing the model
+        orm_mode = True
+        fields = {'user': {'exclude': {'password'}}}
 
 class LoginRequest(BaseModel):
     username: str
