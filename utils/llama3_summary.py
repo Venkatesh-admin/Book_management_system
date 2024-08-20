@@ -8,7 +8,7 @@ def generate_summary(text):
         messages=[
             {
                 "role": "user",
-                "content": f"Summarize this text in 100 words: {text}",
+                "content": f"Summarize this text in 100 words and if text less than 200 words let me know: {text}",
             }
         ],
         model="llama-3.1-8b-instant",
