@@ -156,8 +156,12 @@ async def get_book_summary(db: AsyncSession, id: int):
     
     # Aggregate reviews for summary
     review_result = await db.execute(select(func.avg(models.Review.rating).label('average_rating')).filter_by(book_id=id))
-    average_rating = review_result.scalars().first().average_rating or 0
     
+    average_rating = review_result.scalar()
+    if average_rating is None:
+        average_rating=0
+    else:
+        average_rating = round(average_rating,2)
     return {
         "summary": book.summary or "No summary available",
         "average_rating": average_rating
