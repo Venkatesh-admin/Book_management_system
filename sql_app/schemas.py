@@ -9,13 +9,13 @@ class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
+class UserPublic(BaseModel):
+    username: str
+    email: EmailStr
+
 class UserResponse(BaseModel):
     message:str
-    user:Optional[UserCreate]=None
-    class Config:
-        # Exclude the password field when serializing the model
-        orm_mode = True
-        fields = {'user': {'exclude': {'password'}}}
+    user:Optional[UserPublic]=None
 
 class LoginRequest(BaseModel):
     username: str
