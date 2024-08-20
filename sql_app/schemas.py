@@ -50,7 +50,7 @@ class BookResponse(BaseModel):
     message:Optional[str]=None
 
 class BookListResponse(BaseModel):
-    books: List[BookResponse]
+    books: List[BookCreate]
 
 class ReviewCreate(BaseModel):
     user_id: int
