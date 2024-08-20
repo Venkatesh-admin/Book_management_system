@@ -40,6 +40,8 @@ class BookUpdate(BaseModel):
     year_published: Optional[int] = None
     summary: Optional[str] = None
 
+
+
 class BookResponse(BaseModel):
     id: int
     title: str
@@ -50,7 +52,7 @@ class BookResponse(BaseModel):
     message:Optional[str]=None
 
 class BookListResponse(BaseModel):
-    books: List[BookCreate]
+    books: List[BookUpdate]
 
 class ReviewCreate(BaseModel):
     user_id: int
